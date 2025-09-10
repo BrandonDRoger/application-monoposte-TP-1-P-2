@@ -26,7 +26,7 @@ public class TicketListener {
     @PreUpdate
     public void preMise_A_Jour(Ticket ticket) {
         if (ticket.getStatut() == Ticket.Statut.FERME && ticket.getDateDeFermeture() == null) {
-            ticket.setDateDeCreation(new Date());
+            ticket.setDateDeFermeture(new Date());
             System.out.println("CALLBACK @PreUpdate: dateFermeture fixée à "
                     + ticket.getDateDeFermeture() + " pour ticket id=" + ticket.getId());
         }
