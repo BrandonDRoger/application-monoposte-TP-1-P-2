@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
+@EntityListeners(Ticket.TicketListener.class)
 public class Ticket {
 
     public enum Statut {
@@ -89,5 +90,11 @@ public class Ticket {
 
     public void setDureeOuverture(Long dureeOuverture) {
         this.dureeOuverture = dureeOuverture;
+    }
+
+    public static interface TicketListener {
+        @PrePersist
+        public void beforeSave();
+
     }
 }
