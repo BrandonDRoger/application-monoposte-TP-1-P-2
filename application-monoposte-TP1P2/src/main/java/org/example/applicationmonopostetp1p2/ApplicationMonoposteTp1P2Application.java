@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -62,6 +63,14 @@ public class ApplicationMonoposteTp1P2Application {
             System.out.println(">>> Ticket #1 supprimé.");
 
             System.out.println("=== FIN TEST CALLBACKS ===");
+
+            /**
+             * Partie 2 – CallBack et Lambda
+             */
+
+            List<String> items = List.of("Item1", "Item2", "Item3", "Item4");
+            AfficheListe afficheListe = new AfficheListe();
+            afficheListe.afficherItem(items, item -> System.out.println("Elément : " + item));
         };
     }
 }
