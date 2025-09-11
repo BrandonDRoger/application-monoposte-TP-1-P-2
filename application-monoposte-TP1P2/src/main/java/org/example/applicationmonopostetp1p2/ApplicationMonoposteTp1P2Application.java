@@ -66,11 +66,22 @@ public class ApplicationMonoposteTp1P2Application {
 
             /**
              * Partie 2 – CallBack et Lambda
+             *
+             * 1. Affichage d’une liste
              */
 
             List<String> items = List.of("Item1", "Item2", "Item3", "Item4");
             AfficheListe afficheListe = new AfficheListe();
             afficheListe.afficherItem(items, item -> System.out.println("Elément : " + item));
+
+            /**
+             *
+             * 2. Résultat
+             */
+            int nombre1 = 99, nombre2 = 1;
+            ResultatClass resultatClass = new ResultatClass();
+            resultatClass.somme(nombre1,nombre2,result ->  System.out.println("Resultat : " + result));
+
         };
     }
 }
