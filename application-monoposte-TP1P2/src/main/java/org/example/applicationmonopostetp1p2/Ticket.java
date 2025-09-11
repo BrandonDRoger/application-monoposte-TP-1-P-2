@@ -1,4 +1,4 @@
-package Partie1;
+package org.example.applicationmonopostetp1p2;
 
 import jakarta.persistence.*;
 
